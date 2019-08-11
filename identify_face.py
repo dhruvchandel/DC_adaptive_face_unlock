@@ -62,8 +62,8 @@ def IdentifyFace() :
                                 if results == True :
                                     n_correct += 1
                                 else :
-                                    n_correct +=1
-                                if n_correct >= 4 :
+                                    n_false +=1
+                                if n_false >= 4 :
                                     break
                                 if n_correct >= 6 :
                                     flag = True 
