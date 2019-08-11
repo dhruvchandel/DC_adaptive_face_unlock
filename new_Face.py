@@ -76,5 +76,3 @@ def NewFace():
             vidcap.release()
             cv2.destroyAllWindows()
             break
-
-
