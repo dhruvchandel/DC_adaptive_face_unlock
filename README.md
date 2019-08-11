@@ -5,4 +5,4 @@ To run this program effectively on your UNIX based system install some additiona
 
 Run the terminal in the folder and run main.py
 Atleast store one face in the system by navigating through the menu commands is the program.
-You are all good to go , the program will now be able to detect differences between your face and anyone else's.
+You are all good to go , the program will now be able to detect differences between your face and anyone else's and also adapt to the changes with time in the faces of the respective Users.
