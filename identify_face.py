@@ -7,6 +7,7 @@ import time
 def IdentifyFace() :
     BASE_DIR = os.getcwd()
     VALID_FACES_DIR = os.path.join(BASE_DIR,"valid_faces")
+    os.chdir(BASE_DIR)
 
     # We will take in input an image of the person sitting in the car capture one of the image of his 
     # and perform testing on it 
@@ -58,7 +59,7 @@ def IdentifyFace() :
                                     results = True
                                 else :
                                     results = False
-                                # print(results)
+                                print(results)
                                 if results == True :
                                     n_correct += 1
                                 else :
@@ -70,8 +71,10 @@ def IdentifyFace() :
                                     true_id_detected = "Hello " + user_id_names
                                     os.remove(os.path.join(path1, files[0]))
                                     print(str(files[0]))
-                                    cv2.imwrite(str(files[0]), unknown_image)
+                                    cv2.cvtColor(face_id_under_scan, cv2.COLOR_BGR2RGB)
+                                    cv2.imwrite(str(files[0]), face_id_under_scan)
                                     break
                             except :
                                 pass
+    os.remove(os.path.join(os.path.join(BASE_DIR, "scan_user_id"),"faceIDunderScan.png"))
     return true_id_detected
