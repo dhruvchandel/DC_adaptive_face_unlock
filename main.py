@@ -1,5 +1,6 @@
 import new_Face
 import identify_face
+import del_pycache
 
 condition = True
 
@@ -13,9 +14,13 @@ def ShowMenu() :
 while condition == True :
     ShowMenu()
     choice = int(input("Enter Your Choice"))
-    if choice == 3 :
-        condition = False
-    if choice == 1 :
-        new_Face.NewFace()
-    if choice == 2 :
-        print(identify_face.IdentifyFace())
+    try :
+        if choice == 3 :
+            condition = False
+        if choice == 1 :
+            new_Face.NewFace()
+        if choice == 2 :
+            print(identify_face.IdentifyFace())
+    except :
+        print("Hey Lets Re-run the program; Seems like some error occured !!!!")
+    del_pycache.__pycache__deleter()
